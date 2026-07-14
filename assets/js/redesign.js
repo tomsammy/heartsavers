@@ -38,9 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Close mobile menu when clicking nav links
-    const navLinks = navMenu.querySelectorAll('.nav-link:not(javascript:void(0))');
+    const navLinks = navMenu.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('javascript')) {
+          return;
+        }
         // Only close if it's not a parent dropdown trigger
         if (!link.parentElement.classList.contains('has-dropdown') || window.innerWidth > 768) {
           navMenu.classList.remove('open');
