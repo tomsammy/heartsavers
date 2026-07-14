@@ -1,0 +1,14 @@
+{
+  "name": "heartsavers-college-of-nursing",
+  "version": "1.0.0",
+  "description": "Website of Heartsavers College of Nursing Sciences, Ilorin, Kwara State.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}
