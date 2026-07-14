@@ -294,8 +294,20 @@ img {
   width: 100%;
 }
 
-.header-area:not(.sticky) .nav-link {
-  color: var(--neutral-dark);
+/* Desktop non-sticky state: white text on transparent overlay */
+@media (min-width: 769px) {
+  .header-area:not(.sticky) .nav-link {
+    color: var(--white);
+  }
+  .header-area:not(.sticky) .nav-link:hover,
+  .header-area:not(.sticky) .nav-link.active {
+    color: var(--secondary-accent);
+  }
+}
+
+/* Mobile hamburger toggle bars color when not sticky */
+.header-area:not(.sticky) .menu-toggle span {
+  background-color: var(--white);
 }
 
 /* Dropdown Menu */
