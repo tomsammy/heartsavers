@@ -79,25 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* --- INTERACTIVE HERO FADE SLIDER --- */
-  const slides = document.querySelectorAll('.hero-slide');
-  let currentSlide = 0;
-  const slideInterval = 5000; // 5 seconds
-  
-  if (slides.length > 0) {
-    function nextSlide() {
-      // Remove active class from current slide
-      slides[currentSlide].classList.remove('active');
-      
-      // Advance to next index
-      currentSlide = (currentSlide + 1) % slides.length;
-      
-      // Add active class to new slide
-      slides[currentSlide].classList.add('active');
-    }
-    
-    setInterval(nextSlide, slideInterval);
-  }
+
 
   /* --- SCROLL REVEAL TRIGGERS --- */
   const revealElements = document.querySelectorAll('.reveal');

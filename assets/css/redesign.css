@@ -375,32 +375,7 @@ img {
   height: 100vh;
   min-height: 700px;
   overflow: hidden;
-}
-
-.hero-slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-
-.hero-slide.active {
-  opacity: 1;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #1f4096 100%);
 }
 
 .hero-overlay {
@@ -409,12 +384,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to right, 
-    rgba(25, 27, 92, 0.95) 0%, 
-    rgba(25, 27, 92, 0.75) 50%, 
-    rgba(0, 150, 220, 0.4) 100%
-  );
+  background: radial-gradient(circle at 80% 20%, rgba(0, 150, 220, 0.15) 0%, transparent 50%);
   z-index: 2;
 }
 
