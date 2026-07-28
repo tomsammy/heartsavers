@@ -5,3 +5,5 @@ dist
 .git
 *.bak
 *.log
+
+.vercel

@@ -718,18 +718,18 @@ img {
   margin-bottom: 2.25rem;
 }
 
-/* --- INSTRUCTORS SECTION --- */
-.instructors-section {
+/* --- FACILITIES SECTION --- */
+.facilities-section {
   background-color: var(--white);
 }
 
-.instructors-grid {
+.facilities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 
-.instructor-card {
+.facility-card {
   background-color: var(--white);
   border: 1px solid var(--neutral-border);
   border-radius: var(--border-radius-md);
@@ -738,50 +738,59 @@ img {
   transition: var(--transition-normal);
 }
 
-.instructor-card:hover {
+.facility-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--glass-shadow);
 }
 
-.instructor-img {
-  height: 260px;
+.facility-img {
+  height: 220px;
   background-color: var(--neutral-light);
   overflow: hidden;
   position: relative;
 }
 
-.instructor-img img {
+.facility-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition-slow);
 }
 
-.instructor-card:hover .instructor-img img {
+.facility-card:hover .facility-img img {
   transform: scale(1.05);
 }
 
-.instructor-info {
-  padding: 2rem;
+.facility-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(10, 37, 64, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--white);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.instructor-info h3 {
-  font-size: 1.35rem;
-  margin-bottom: 0.5rem;
+.facility-info {
+  padding: 1.75rem;
 }
 
-.instructor-title {
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+.facility-info h3 {
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.6rem;
 }
 
-.instructor-bio {
+.facility-info p {
   font-size: 0.9rem;
   color: var(--neutral-body);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* --- GOVERNING COUNCIL & DIRECTORS --- */
@@ -1079,7 +1088,7 @@ textarea.form-control {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .instructors-grid {
+  .facilities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid {
@@ -1177,7 +1186,7 @@ textarea.form-control {
   .section-padding {
     padding: 4.5rem 0;
   }
-  .portal-grid, .instructors-grid, .stats-grid, .footer-grid {
+  .portal-grid, .facilities-grid, .stats-grid, .footer-grid {
     grid-template-columns: 1fr;
   }
   .hero-buttons {
