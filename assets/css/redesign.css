@@ -693,6 +693,113 @@ img {
   margin-top: 0.25rem;
 }
 
+/* --- COURSES & DEPARTMENTS GRID --- */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.course-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--neutral-border);
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glass-shadow);
+  border-color: var(--primary-light);
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.course-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background-color: rgba(46, 49, 146, 0.08);
+  color: var(--primary);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  transition: var(--transition-normal);
+}
+
+.course-card:hover .course-icon-badge {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.course-dept-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.course-card h4 {
+  font-size: 1.25rem;
+  color: var(--neutral-dark);
+  line-height: 1.3;
+}
+
+.course-desc {
+  font-size: 0.92rem;
+  color: var(--neutral-body);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  line-height: 1.55;
+}
+
+.course-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--neutral-border);
+  margin-top: auto;
+}
+
+.course-level {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: var(--neutral-light);
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+}
+
+.course-apply-link {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.course-card:hover .course-apply-link {
+  color: var(--accent);
+}
+
 /* --- ADMISSION CTA BANNER --- */
 .admission-banner {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -1088,7 +1195,7 @@ textarea.form-control {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .facilities-grid {
+  .facilities-grid, .courses-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid {
@@ -1098,6 +1205,9 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
   .sub-header {
     display: none;
   }
